@@ -2,14 +2,14 @@
 
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>active-iq</title>
+    <title>active-iq | NetApp Documentation</title>
     <atom:link href="https://docs.netapp.com/us-en/active-iq/feed.xml" rel="self" type="application/rss+xml"/>
     <link>https://docs.netapp.com/us-en/active-iq</link>
-    <description>The latest updates from NetApp Cloud Docs</description>
+    <description>The latest updates from NetApp Documentation</description>
     <language>en-us</language>
     <ttl>60</ttl>
-    <pubDate>Tue, 01 Mar 2022 15:59:38 +0000</pubDate>
-    <lastBuildDate>Tue, 01 Mar 2022 15:59:38 +0000</lastBuildDate>
+    <pubDate>Fri, 11 Mar 2022 06:44:11 +0000</pubDate>
+    <lastBuildDate>Fri, 11 Mar 2022 06:44:11 +0000</lastBuildDate>
     
   </channel>
 </rss>
