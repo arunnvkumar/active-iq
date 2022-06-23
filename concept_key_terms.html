@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/active-iq/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/active-iq/concept_key_terms.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/active-iq/concept_key_terms.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/active-iq/concept_key_terms.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/active-iq/concept_key_terms.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/active-iq/concept_key_terms.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/active-iq/concept_key_terms.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/active-iq/concept_key_terms.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/active-iq/concept_key_terms.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/active-iq/concept_key_terms.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/active-iq/concept_key_terms.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -562,6 +554,8 @@
             Identify system requirements proactively
           </a>
           
+
+
 
 
 
@@ -873,7 +867,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/index.html">
         Active IQ Digital Advisor docs
       </a></li><li class="subfolders "><a href="#">
@@ -946,6 +940,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/concept_overview_planning.html">
         Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html">
+        Take informed decisions based on cloud recommendations
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_identify_capacity_system.html">
         Identify systems reaching capacity limits
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_avoid_a_volume_filling_up_to_prevent_an_outage.html">
@@ -1081,11 +1077,19 @@
 <p class="page-details">
   
     
-    <time datetime="2021-10-19 09:29:22 +0000">10/19/2021</time>
+    <time datetime="2022-06-22 10:07:10 +0000">06/22/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-manishc">
+    <img  class="avatar avatar-small"
+          alt="netapp-manishc"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/43026465?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
   <a target="_blank" class="ext-link-indicator" href="https://github.com/FarheenViquas">
     <img  class="avatar avatar-small"
           alt="FarheenViquas"
@@ -1233,10 +1237,24 @@
 </div>
 </li>
 <li>
-<p><strong>Upgrades widget:</strong> Provides the number of upgrades that are available.</p>
+<p><strong>Upgrades widget:</strong> Provides the number of upgrades that are available for ONTAP and E-Series systems:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>For ONTAP systems, you can view information about the number of systems that require an upgrade, and then request for an upgrade plan.</p>
 </li>
 <li>
-<p><strong>Storage Efficiency:</strong> Identifies the storage efficiency ratio and savings of your storage system with and without Snapshot backups for AFF systems, non-AFF systems, or both.</p>
+<p>For E-Series systems, you can only view information about the number of systems that require an upgrade.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Storage Efficiency:</strong> Identifies the storage efficiency ratio and savings of your storage system with and without Snapshot copies for AFF systems, non-AFF systems, or both.</p>
 </li>
 <li>
 <p><strong>Performance graph:</strong> Enables you to analyze the performance of your storage devices by viewing the graphical format of performance data. You can view detailed performance graphs of the ONTAP cluster for the selected node.</p>
@@ -1249,9 +1267,6 @@
 <div class="paragraph">
 <p>To access the AutoSupport feature, log in to Active IQ Digital Advisor and search for a cluster or hostname. The AutoSupport option is available on the left pane.</p>
 </div>
-</li>
-<li>
-<p><strong>Cloud ready workloads:</strong> Provides information about the different types of workloads available within your storage system and identify the workloads that are cloud-ready. Moving workloads to the cloud result in cost savings and provide cloud disaster recovery. You can move workloads and volumes that are running on Oracle, SAP, SAP HANA, File Share, SQL, and SharePoint. NetApp® Cloud Volumes helps in moving workloads and volumes to the cloud by delivering extreme performance and advanced data management capabilities to satisfy even your most demanding applications in the cloud. For more information about using NetApp® Cloud Volumes, see the <a href="https://docs.netapp.com/us-en/occm/task_managing_ontap.html">Cloud Manager</a> documentation.</p>
 </li>
 <li>
 <p><strong>Quick Links:</strong> Provides the list of applications that can be launched using Active IQ Digital Advisor.</p>
@@ -1443,4 +1458,5 @@
     </script>
     <script src='/us-en/active-iq/js/www-ntap.js'></script>
     <script src='/us-en/active-iq/js/tabbed-blocks.js'></script>
+    <script src='/us-en/active-iq/js/sidebar.js'></script>
   </body></html>

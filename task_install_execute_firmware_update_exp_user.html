@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/active-iq/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/active-iq/task_install_execute_firmware_update_exp_user.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/active-iq/task_install_execute_firmware_update_exp_user.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/active-iq/task_install_execute_firmware_update_exp_user.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/active-iq/task_install_execute_firmware_update_exp_user.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/active-iq/task_install_execute_firmware_update_exp_user.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/active-iq/task_install_execute_firmware_update_exp_user.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/active-iq/task_install_execute_firmware_update_exp_user.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/active-iq/task_install_execute_firmware_update_exp_user.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/active-iq/task_install_execute_firmware_update_exp_user.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/active-iq/task_install_execute_firmware_update_exp_user.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -553,6 +545,8 @@
             Identify system requirements proactively
           </a>
           
+
+
 
 
 
@@ -873,7 +867,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/index.html">
         Active IQ Digital Advisor docs
       </a></li><li class="subfolders "><a href="#">
@@ -946,6 +940,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/concept_overview_planning.html">
         Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html">
+        Take informed decisions based on cloud recommendations
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_identify_capacity_system.html">
         Identify systems reaching capacity limits
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_avoid_a_volume_filling_up_to_prevent_an_outage.html">
@@ -1409,4 +1405,5 @@ If the URLs for disk firmware, shelf firmware, and service processor firmware ar
     </script>
     <script src='/us-en/active-iq/js/www-ntap.js'></script>
     <script src='/us-en/active-iq/js/tabbed-blocks.js'></script>
+    <script src='/us-en/active-iq/js/sidebar.js'></script>
   </body></html>

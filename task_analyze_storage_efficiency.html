@@ -277,35 +277,27 @@
     </div>
   </div>
   <div class="n-property-bar__toolbar">
-    <!-- Start Language Selector --><div id="ie-i18n" class="n-property-bar__lang-selector">
-      <div id="ie-i18n-menu">
-      <span class="ie-i18n-lang">English</span>
-        <button class="ie-i18n-icon-container" type="button">
+    <!-- Start Language Selector --><div id="language-dropdown" class="custom-dropdown custom-dropdown-lang">
+      <div class="custom-dropdown-select custom-dropdown-select-lang">
+      <span class="lang-name">English</span>
           <svg class="n-globe__icon" aria-labelledby="title">
             <title>globe</title>
             <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/us-en/active-iq/common/svg/sprite.svg#globe"></use>
           </svg>
         </button>
       </div>
-      <div id="n-property-navigation-bar__menu--language-selector" class="ie-i18n-results-container n-menu n-menu--v3 n-menu--is-active" style="display: none;">
-        <div class="n-language-selector-menu">
-          <ul class="n-menu__list">
-            <li class="n-menu__list-column">
-              <ul class="n-menu__list"><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/us-en/active-iq/task_analyze_storage_efficiency.html" class="n-menu__header-text"><span translate="no" class="notranslate">English</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ja-jp/active-iq/task_analyze_storage_efficiency.html" class="n-menu__header-text"><span translate="no" class="notranslate">日本語</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/ko-kr/active-iq/task_analyze_storage_efficiency.html" class="n-menu__header-text"><span translate="no" class="notranslate">한국어</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-cn/active-iq/task_analyze_storage_efficiency.html" class="n-menu__header-text"><span translate="no" class="notranslate">简体中文</span></a>
-                </li><li class="n-menu__list-item n-menu__list-item--level-1">
-                  <a href="https://docs.netapp.com/zh-tw/active-iq/task_analyze_storage_efficiency.html" class="n-menu__header-text"><span translate="no" class="notranslate">繁體中文</span></a>
-                </li></ul>
-            </li>
-          </ul>
-        </div>
-      </div>
+
+      <ul class="custom-dropdown-menu"><li>
+          <a href="https://docs.netapp.com/us-en/active-iq/task_analyze_storage_efficiency.html" target="_self"><span translate="no" class="notranslate">English</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ja-jp/active-iq/task_analyze_storage_efficiency.html" target="_self"><span translate="no" class="notranslate">日本語</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-cn/active-iq/task_analyze_storage_efficiency.html" target="_self"><span translate="no" class="notranslate">简体中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/zh-tw/active-iq/task_analyze_storage_efficiency.html" target="_self"><span translate="no" class="notranslate">繁體中文</span></a>
+        </li><li>
+          <a href="https://docs.netapp.com/ko-kr/active-iq/task_analyze_storage_efficiency.html" target="_self"><span translate="no" class="notranslate">한국어</span></a>
+        </li></ul>
     </div><!-- End Language Selector -->
 
     <div class="n-property-bar__cta"></div>
@@ -553,6 +545,8 @@
             Identify system requirements proactively
           </a>
           
+
+
 
 
 
@@ -873,7 +867,7 @@
     $("#toggleContainerPdf").toggle('display');
     $(".n-pdf-body-container .zip-pdf-link-container").toggle('display');
   });
-</script><div class="sidebar-nav-container">
+</script><div class="sidebar-nav-container" id="mysidebardiv">
   <ul id="mysidebar" class="nav"><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/index.html">
         Active IQ Digital Advisor docs
       </a></li><li class="subfolders "><a href="#">
@@ -946,6 +940,8 @@
       </a>
       <ul><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/concept_overview_planning.html">
         Overview
+      </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task-informed-decisions-based-on-cloud-recommendations.html">
+        Take informed decisions based on cloud recommendations
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_identify_capacity_system.html">
         Identify systems reaching capacity limits
       </a></li><li class=" "><a class="na-navbar-padding" href="/us-en/active-iq/task_avoid_a_volume_filling_up_to_prevent_an_outage.html">
@@ -1081,11 +1077,19 @@
 <p class="page-details">
   
     
-    <time datetime="2022-02-25 03:53:52 +0000">02/25/2022</time>
+    <time datetime="2022-06-15 04:25:54 +0000">06/15/2022</time>
     
   
 
 <span>Contributors
+  <a target="_blank" class="ext-link-indicator" href="https://github.com/netapp-manishc">
+    <img  class="avatar avatar-small"
+          alt="netapp-manishc"
+          width="20" height="20"
+          src="https://avatars.githubusercontent.com/u/43026465?v=4"
+          style="border-radius: 50%;"/>
+  </a>
+  
 </span>
 
 
@@ -1110,7 +1114,7 @@ This feature is not supported on E-Series systems.
 <p>The capacity dashboard displays the capacity details and the capacity forecast of your system. Capacity forecast uses historical capacity information to identify the utilization of each system. Based on the historical data (a year’s data, if available) of utilized and allocated capacity, the algorithm considers the current utilization of each system and generates a forecast for the system’s utilization over the next 1 through 6 months.</p>
 </div>
 <div class="paragraph">
-<p>The storage efficiency dashboard displays the storage efficiency ratio, the logical space used, the physical space used, and the total data saved for storage systems running ONTAP 9.1 and later. The efficiency ratio and savings can be seen with and without Snapshot backups for AFF systems, non-AFF systems, or both. The total savings across customer storage can be seen per efficiency feature such as volume deduplication, volume compression, compaction, FlexClone volumes, and Snapshot backups. You can also view the top 5 storage systems with the best efficiency ratio.</p>
+<p>The storage efficiency dashboard displays the storage efficiency ratio, the logical space used, the physical space used, and the total data saved for storage systems running ONTAP 9.1 and later. The efficiency ratio and savings can be seen with and without Snapshot copies for AFF systems, non-AFF systems, or both. The total savings across customer storage can be seen per efficiency feature such as volume deduplication, volume compression, compaction, FlexClone volumes, and Snapshot copies. You can also view the top 5 storage systems with the best efficiency ratio.</p>
 </div>
 <div class="videoblock">
 <div class="content">
@@ -1306,4 +1310,5 @@ This feature is not supported on E-Series systems.
     </script>
     <script src='/us-en/active-iq/js/www-ntap.js'></script>
     <script src='/us-en/active-iq/js/tabbed-blocks.js'></script>
+    <script src='/us-en/active-iq/js/sidebar.js'></script>
   </body></html>
